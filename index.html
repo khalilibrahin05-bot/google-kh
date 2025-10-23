@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>محلل استطلاعات جوجل</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Cairo', sans-serif;
+      }
+      .no-print {
+        display: initial !important;
+      }
+      @media print {
+        body > *:not(#print-container) {
+          display: none !important;
+        }
+        #print-container {
+          display: block !important;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background: white;
+        }
+        .no-print {
+          display: none !important;
+        }
+        #print-container > * {
+           margin-bottom: 2rem;
+           page-break-inside: avoid;
+        }
+        #print-container .shadow-md {
+            box-shadow: none;
+            border: 1px solid #e2e8f0;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "papaparse": "https://aistudiocdn.com/papaparse@^5.5.3",
+    "recharts": "https://aistudiocdn.com/recharts@^3.3.0",
+    "html2canvas": "https://aistudiocdn.com/html2canvas@^1.4.1",
+    "jspdf": "https://aistudiocdn.com/jspdf@^2.5.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.26.0"
+  }
+}
+</script>
+</head>
+  <body class="flex flex-col min-h-screen">
+    <div id="root" class="flex-grow"></div>
+    <footer class="bg-white mt-10 py-4 text-center text-sm text-gray-500 no-print border-t">
+      إعداد أ.خليل إبراهيم المخلافي | تحت إشراف مدير عام المدارس أ. صالح الرفاعي
+    </footer>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
